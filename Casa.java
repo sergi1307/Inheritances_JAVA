@@ -32,3 +32,27 @@ class Casa {
         return color;
     }
 }
+
+class Chalet extends Casa {
+    private int mjardin;
+    private String colorValla;
+
+    public Chalet(int puertas, int ventanas, String color, int mj, String cv) {
+        super(puertas, ventanas, color);
+        this.mjardin = mj;
+        this.colorValla = cv;
+        System.out.println("Chalet inicializado");
+    }
+    public void setMjardin(int x) {
+        this.mjardin = x;
+    }
+    public int getMjardin() {
+        return mjardin;
+    }
+    public void setColorValla(String s) {
+        this.colorValla = s;
+    }
+    public String getColorValla() {
+        return colorValla;
+    }
+}
