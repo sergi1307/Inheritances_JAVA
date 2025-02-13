@@ -12,6 +12,9 @@ class Casa {
         this.qventanas = qf;
         this.color = col;
     }
+    public Casa(int qp) {
+        this.qpuertas = qp;
+    }
 
     public void setQpuertas(int x) {
         this.qpuertas = x;
@@ -31,74 +34,19 @@ class Casa {
     public String getColor() {
         return color;
     }
-}
 
-class Chalet extends Casa {
-    private int mjardin;
-    private String colorValla;
-
-    public Chalet(int puertas, int ventanas, String color, int mj, String cv) {
-        super(puertas, ventanas, color);
-        this.mjardin = mj;
-        this.colorValla = cv;
-        System.out.println("Chalet inicializado");
-    }
-    public void setMjardin(int x) {
-        this.mjardin = x;
-    }
-    public int getMjardin() {
-        return mjardin;
-    }
-    public void setColorValla(String s) {
-        this.colorValla = s;
-    }
-    public String getColorValla() {
-        return colorValla;
-    }
-}
-
-class Adosado extends Casa {
-    private int qcocheras;
-    private boolean patio;
-
-    public Adosado(int puertas, int ventanas, String color, int qcocheras, Boolean patio) {
-        super(puertas, ventanas, color);
-        this.qcocheras = qcocheras;
-        this.patio = patio;
-        System.out.println("Adosado Inicializado.");
-    }
-    public void setQcocheras(int x) {
-        this.qcocheras = x;
-    }
-    public int getQcocheras() {
-        return qcocheras;
-    }
-    public void setPatio(boolean p) {
-        this.patio = p;
-    }
-    public boolean getPatio() {
-        return patio;
-    }
-}
-
-class Piso extends Casa {
-    private int nplanta, nbalcones;
-
-    public Piso(int puertas, int ventanas, String color, int nplanta, int nbalcones) {
-        super(puertas, ventanas, color);
-        this.nplanta = nplanta;
-        this.nbalcones = nbalcones;
-    }
-    public void setNplanta(int x) {
-        this.nplanta = x;
-    }
-    public int getNplanta() {
-        return nplanta;
-    }
-    public void setNbalcones(int x) {
-        this.nbalcones = x;
-    }
-    public int getNbalcones() {
-        return nbalcones;
+    public void mostrarDatos() {
+        System.out.println("NP: " + this.qpuertas);
+        if (this.qventanas <= 0) {
+            System.out.println("NV: N/A");
+        } else {
+            System.out.println("NV: " + this.qventanas);
+        }
+        if (this.color == null) {
+            System.out.println("COLOR: N/A");
+        } else {
+            System.out.println("COLOR: " + this.color);
+        }
+        System.out.println();
     }
 }
