@@ -9,5 +9,6 @@ public class Main {
 
         casa1.mostrarDatos();
         casa2.mostrarDatos();
+        System.out.println(casa1);
     }
 }

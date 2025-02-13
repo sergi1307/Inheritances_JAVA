@@ -49,4 +49,7 @@ class Casa {
         }
         System.out.println();
     }
+    public String toString() {
+        return "NP: " + this.qpuertas;
+    }
 }
