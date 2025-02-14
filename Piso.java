@@ -18,4 +18,16 @@ class Piso extends Casa {
     public int getNbalcones() {
         return nbalcones;
     }
+
+    @Override
+    public void mostrarDatos() {
+        System.out.println("El piso tiene " + this.getQpuertas() + " puertas, " + this.getQventanas() + " ventanas " + this.getColor() + " color." +
+                this.nplanta + "número de planta " + this.nbalcones + "número de balcones.");
+        System.out.println("Es un piso."  + "\n");
+    }
+
+    @Override
+    public String toString() {
+        return "PISO -> " + super.toString() + "Núm Planta= " + this.nplanta + " , Núm Balcons= " + this.nbalcones  + "\n";
+    }
 }

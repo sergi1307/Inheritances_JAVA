@@ -8,16 +8,14 @@ class Chalet extends Casa {
         this.mjardin = mj;
         this.colorValla = cv;
         this.mantener = m;
-        System.out.println("Chalet inicializado");
     }
     public Chalet(int puertas, int mjardin) {
         super(puertas);
         this.mjardin = mjardin;
     }
     public void aumentaMantener() {
-        this.mantener *= 0.02;
+        this.mantener *= 1.02;
     }
-
     public void setMjardin(int x) {
         this.mjardin = x;
     }
@@ -35,5 +33,23 @@ class Chalet extends Casa {
     }
     public double getMantener() {
         return mantener;
+    }
+
+    public void mostrarDatos() {
+        System.out.println("El chalet tiene " + this.getQpuertas() + " puertas, " + this.getQventanas() + " ventanas " + this.getColor() + " de color." +
+                "Y tiene " + this.mjardin + " metros de jardín, " + this.colorValla + " de color de valla " + this.mantener +  " de porcentaje de mantenimiento.");
+        System.out.println("Es un adosado."  + "\n");
+    }
+
+    @Override
+    public String toString() {
+        return "\nCantidad de puertas: " + getQpuertas() +"\nCantidad de ventanas: " + getQventanas() +
+                "\nColor: " + getColor() + "\nMetros de jardín: " + this.mjardin + "\nColor de valla: " + this.colorValla +
+                "\nPorcentaje de mantenimiento: " + this.mantener  + "\n";
+    }
+
+    public void pintar(String colorCasa, String colorValla) {
+        super.pintar(colorCasa);
+        this.colorValla = colorValla;
     }
 }

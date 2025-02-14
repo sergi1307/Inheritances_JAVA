@@ -50,6 +50,11 @@ class Casa {
         System.out.println();
     }
     public String toString() {
-        return "NP: " + this.qpuertas;
+        return "Puertas: " + this.qpuertas + "\nVentanas: " + this.qventanas +
+                "\nColor: " + this.color  + "\n";
+    }
+
+    public void pintar(String color) {
+        this.color = color;
     }
 }
